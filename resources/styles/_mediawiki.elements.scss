@@ -11,44 +11,44 @@
 /* stylelint-disable selector-class-pattern */
 
 /* Links */
-a {
+a:not(.btn) {
     text-decoration: none;
-    color: #0645ad;
+    color: $link-color;
     background: none;
 }
 
-a:not([href]) {
+a:not([href]):not(.btn) {
     cursor: pointer; /* Always cursor:pointer even without href */
 }
 
-a:visited {
-    color: #0b0080;
+a:visited:not(.btn) {
+    color: darken($link-color, 15%);
 }
 
-a:active {
-    color: #faa700;
+a:active:not(.btn) {
+    color: $warning;
 }
 
-a:hover,
-a:focus {
+a:hover:not(.btn),
+a:focus:not(.btn) {
     text-decoration: underline;
 }
 
-a:lang(ar),
-a:lang(kk-arab),
-a:lang(mzn),
-a:lang(ps),
-a:lang(ur) {
+a:lang(ar):not(.btn),
+a:lang(kk-arab):not(.btn),
+a:lang(mzn):not(.btn),
+a:lang(ps):not(.btn),
+a:lang(ur):not(.btn) {
     text-decoration: none;
 }
 
 a.stub {
-    color: #723;
+    color: darken($error, 15%);
 }
 
 a.new,
 #p-personal a.new {
-    color: #d33;
+    color: $error;
 }
 
 /* self links */
@@ -70,7 +70,7 @@ a.mw-selflink:visited {
 
 a.new:visited,
 #p-personal a.new:visited {
-    color: #a55858;
+    color: lighten($error, 30%);
 }
 
 /* Interwiki & External links */
